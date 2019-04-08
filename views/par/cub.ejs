@@ -13,7 +13,7 @@ function init() {
     var w=window.innerWidth
     var h=window.innerHeight
 var wid=document.getElementById("w")
-wid.innerHTML=w
+wid.innerHTML=w+","+h
     console.log(wid.innerHTML)
 
 container = document.createElement( 'div' );
@@ -33,7 +33,7 @@ info.style.fontSize= 24+'px';
 }
 
 info.style.fontFamily= 'Takao';
-info.style.top = '50px';
+info.style.top = '150px';
 info.style.width = '100%';
 //info.style.textShadow= '3px 3px 8px #ffffff';
 info.style.textAlign = 'center';

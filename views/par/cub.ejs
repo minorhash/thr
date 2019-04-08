@@ -14,9 +14,9 @@ function init() {
     var h=window.innerHeight
 var wid=document.getElementById("w")
 wid.innerHTML=w+","+h
-    console.log(wid.innerHTML)
+console.log(wid.innerHTML)
 
-container = document.createElement( 'div' );
+container = document.createElement('div');
 
 document.body.appendChild( container );
 
@@ -33,7 +33,7 @@ info.style.fontSize= 24+'px';
 }
 
 info.style.fontFamily= 'Takao';
-info.style.top = '150px';
+info.style.top = '50px';
 info.style.width = '100%';
 //info.style.textShadow= '3px 3px 8px #ffffff';
 info.style.textAlign = 'center';
@@ -46,17 +46,17 @@ lab2.style.position = 'absolute';
 //lab2.style.opacity=0.5 
 lab2.style.color= 'black';
 lab2.style.fontSize= 'xx-large';
-lab2.style.top = 130+"px";
+lab2.style.top = 200+"px";
 lab2.style.width = '100%';
 lab2.style.textShadow= '3px 3px 2px #ffffff';
 lab2.style.textAlign = 'center';
 lab2.innerHTML = tx2
-//container.appendChild( lab2 );
+container.appendChild( lab2 );
 
-var tx2="next >"
+var nex="next >"
 var ref= document.createElement('a');
-    ref.setAttribute("id","nex")
-    ref.setAttribute("href","/page-ana")
+ref.setAttribute("id","nex")
+ref.setAttribute("href","/page-ana")
 
 ref.style.position = 'absolute';
 ref.style.top = window.innerHeight-197+"px";
@@ -65,7 +65,7 @@ ref.style.color= 'white';
 ref.style.fontSize= 'xx-large';
 ref.style.backgroundColor= 'gray';
 ref.style.textAlign = 'center';
-ref.innerHTML = tx2
+ref.innerHTML = nex
 
 container.appendChild(ref);
 

@@ -1,0 +1,16 @@
+<div class="box90">
+<%= shop.tit %>:<%=mer.name%>
+</div><br>
+<%= shop.sku %>：TMS-<%=mer.sku%><br>
+<%= shop.cat %>:<%=mer.cat%><br>
+<%= shop.pri %>:<%=mer.pri.toLocaleString() %> &nbsp;<%= shop.yen %><br><br>
+
+
+<div class="box90"><%= shop.desc %></div><br>
+<div class=""><%=mer.des %></div><br>
+
+<form method="get" action="/shop">
+    <button class="btn btn-info" type="submit"><%= shop.bks %></button>
+</form>
+
+

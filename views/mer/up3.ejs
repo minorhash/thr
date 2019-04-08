@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<% include par/head%>
+<body>
+<!-- menu -->
+
+<% include par/nav%>
+<!-- menu -->
+
+<div class="container-fluid">
+<div class="row">
+<!--- side left ----- -->
+<div class=" col-md-2 col-sm-12" style="color:black">
+<% if(usr!==null) {%> 
+<div class="badge badge-info">welcome:<%= usr%></div>
+<br><br>
+<% include par/out %>
+<%}else{ %>
+<% include par/login %>
+<%} %>
+</div>
+<!--- side left ----- -->
+
+<div class="col-sm-8" style="background-color:white">
+<div align="left" style="color:black">
+
+<%=title %><br>
+<%= bod.name %><br>
+品番:<%= sku %><br>
+
+<%if(bod){%>
+<img src="../../img/cd/<%= bod.sku%>.png"><br>
+
+<div class="">
+
+<%for(var i in bod){%>
+<%= i %>:
+<%= bod[i] %><br>
+<%}%>
+
+<%= bod.name %>
+<%}%>
+
+</div>
+をついか。
+</div><!-- /center-->
+
+</div><!-- /col8-->
+
+<% include par/2side%>
+</div><!-- /row-->
+
+<div class="footer"><% include par/foot %></div>
+
+</div>
+</div>
+</div><!-- /container-fluid-->
+
+</body>
+</html>
+

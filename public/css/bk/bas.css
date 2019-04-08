@@ -1,0 +1,78 @@
+body{
+font-size :15px;
+font-family:'Syltaen',serif;
+
+}
+
+#bkg1{
+font-size :15px;
+font-family:'Syltaen',serif;
+background-color:yellow;
+
+}
+
+
+/* navber */
+
+.navbar a {
+  color: white;
+  padding: 0px 0px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.nav-item{
+font-size:16px;
+font-family:'Syltaen',serif;
+color:white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+background-color: yellow;
+color: white; /*Sets the text hover color on navbar*/
+}
+
+.navbar-brand{
+font-size:13px;
+font-family:'Syltaen',serif;
+color:white;
+}
+
+
+/* footer */
+
+.foot1{
+font-family:'Syltaen',serif;
+}
+
+/*index*/
+
+.style1 {
+        font-size:16px;
+	padding-bottom: 5px;
+        font-family:'Syltaen',serif;
+	border-bottom: thin dotted rgba(0,0,0,0.39);
+        width:100%
+	padding-top: 5px;
+        margin-left:10px;
+	box-sizing: border-box;
+        
+}
+
+
+.img1{
+    background-image:url("../img/main2.jpg");
+    background-color:red;
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:1600px;
+    height:900px;
+    position:relative;
+}
+
+

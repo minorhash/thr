@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<% include par/head%>
+<body>
+<!-- menu -->
+
+<% include par/nav%>
+<!-- menu -->
+
+<div class="container-fluid">
+<div class="row">
+
+<!--- side left ----- -->
+<div class=" col-md-2 col-sm-12" style="color:black">
+<% if(usr!==null) {%> 
+<div class="badge badge-info">welcome:<%= usr%></div>
+<br><br>
+<% include par/out %>
+<%}else{ %>
+<% include par/login %>
+<%} %>
+</div>
+<!--- side left ----- -->
+<% if(usr){ %>
+<div class="col-sm-8 bg-cor" >
+<div class="row" >
+<div class="col-sm-3 bg-ali" >
+
+<%if(skumer){%>
+<img src="../../img/cd/<%=sku%>.png"><br>
+<% } else {%>
+no img.
+<% }%>
+</div>
+
+<div class="col-sm-9 bg-lg" ><br>
+<%if(skumer){%>
+<form action="/mer/up3" method="post" >
+    <div class="form-group bg-mis px-1 py-1">
+<%for(var i in skumer) {%>
+<%=i%>
+<input type="text" name='<%=i%>' value="<%=skumer[i]%>" style="color:black" ><br>
+
+<%}%>
+を変更しますか？<br>
+<input class="btn btn-info" type="submit" value="submit">
+    </div>
+</form>
+<%}%>
+
+</div><!-- /col9-->
+</div><!-- /row-->
+</div><!-- /col8-->
+
+<% } else {%>
+log in.
+<%}%>
+<% include par/2side%>
+</div><!-- /row-->
+</div><!-- /container-fluid-->
+
+<div class="footer"><% include par/foot %></div>
+</body>
+</html>
+

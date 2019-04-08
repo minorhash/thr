@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<% include par/head %>
+<% include par/nav %>
+<body>
+
+<div class="row">
+
+<div class="col-md-12 col-xs-12"> 
+    <div id="container"></div>    
+<% if(par=="par"){ %>
+<% include par/par1 %>
+<% } else if(par=="dat"){ %>
+<% include par/dat %>
+<% } else if(par=="geo"){ %>
+<% include par/geo %>
+<% } else if(par=="ste"){ %>
+<% include par/ste %>
+<% } else if(par=="cub"){ %>
+<% include par/cub %>
+<% } else if(par=="lin"){ %>
+<% include par/lin %>
+<% } else if(par=="mar"){ %>
+<% include par/mar %>
+<% } else if(par=="mat"){ %>
+<% include par/mat %>
+<% } else if(par=="pan"){ %>
+<% include par/pan %>
+<% } else if(par=="ray"){ %>
+<% include par/ray %>
+<% } else if(par=="tex"){ %>
+<% include par/tex %>
+<% } else if(par=="ana"){ %>
+<% include par/ana %>
+<% } else if(par=="cam"){ %>
+<% include par/cam %>
+
+<% } %>
+
+
+</div>
+
+
+</div><!--row-->
+</div>
+
+
+
+</body>
+
+<% include par/foot %>

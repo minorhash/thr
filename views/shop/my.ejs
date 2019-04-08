@@ -1,0 +1,29 @@
+<% include par/head %>
+<% include par/nav/my %>
+<body>
+<div class="container-fluid">
+<div class="row">
+
+<!--- side left ----- -->
+<div class="col-md-2">
+<br>
+<% include par/left %>
+</div>
+
+<!--- main ---- -->
+
+<div class="col-md-10">
+<br>
+<div class="box97"><%= shop.mypage %></div>
+<br>
+    <% if(mailadr){ %>
+<% include par/my %>
+<% } %>
+</div>
+
+</div></div>
+<br>
+
+<% include par/foot %>
+
+

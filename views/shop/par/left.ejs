@@ -1,0 +1,7 @@
+<% if(usr) {%> 
+<div class="badge badge-info">  &nbsp;<%= usr %>&nbsp;さん</div>
+<br>
+<% include ./out %>
+<%}else{ %>
+<% include ./login %>
+<%} %>

@@ -1,3 +1,4 @@
+<div id="w" class="bg-ali"></div>
 <script src="thr/three.js"></script>
 <script src="tx/cub.js"></script>
 <script>
@@ -11,7 +12,10 @@ animate();
 function init() {
     var w=window.innerWidth
     var h=window.innerHeight
-    console.log(w)
+var wid=document.getElementById("w")
+wid.innerHTML=w
+    console.log(wid.innerHTML)
+
 container = document.createElement( 'div' );
 
 document.body.appendChild( container );
@@ -22,12 +26,11 @@ info.style.backgroundColor= "lightblue"
 //info.style.opacity=0.5 
 
 info.style.color= 'black';
-    if(w>600){
-info.style.fontSize= 64+'px';
-    }else{
-info.style.fontSize= 32+'px';
-
-    }
+if(w>600){
+info.style.fontSize= 48+'px';
+}else{
+info.style.fontSize= 24+'px';
+}
 
 info.style.fontFamily= 'Takao';
 info.style.top = '50px';

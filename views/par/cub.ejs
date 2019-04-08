@@ -9,15 +9,26 @@ init();
 animate();
 
 function init() {
+    var w=window.innerWidth
+    var h=window.innerHeight
+    console.log(w)
 container = document.createElement( 'div' );
+
 document.body.appendChild( container );
 
 var info = document.createElement( 'div' );
 info.style.position = 'absolute';
 info.style.backgroundColor= "lightblue"
 //info.style.opacity=0.5 
+
 info.style.color= 'black';
+    if(w>600){
 info.style.fontSize= 64+'px';
+    }else{
+info.style.fontSize= 32+'px';
+
+    }
+
 info.style.fontFamily= 'Takao';
 info.style.top = '50px';
 info.style.width = '100%';

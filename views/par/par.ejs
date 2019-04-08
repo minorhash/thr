@@ -53,7 +53,7 @@ geometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
 geometry.addAttribute( 'color', new THREE.BufferAttribute( colors, 3 ) );
 geometry.computeBoundingBox();
 return geometry;
-}
+}//gen
 
 function generatePointcloud( color, width, length ) {
 var geometry = generatePointCloudGeometry( color, width, length );
@@ -93,12 +93,14 @@ geometry.addGroup( 0, indices.length );
 var material = new THREE.PointsMaterial( { size: pointSize, vertexColors: THREE.VertexColors } );
 return new THREE.Points( geometry, material );
 }
+
 function init() {
 var container = document.getElementById('container');
 var tx1="webgl"
 var lab = document.createElement('div');
 lab.style.position = 'absolute';
 lab.style.color= 'white';
+lab.style.backgrondColor= 'blue';
 lab.style.fontSize= 'x-large';
 lab.style.top = 50+'px';
 lab.style.width = '100%';
@@ -117,7 +119,7 @@ p1.style.top = '50px';
 p1.style.width = '100%';
 p1.style.textAlign = 'center';
 p1.innerHTML = tx1
-container.appendChild( p1);
+//container.appendChild( p1);
 
 scene = new THREE.Scene();
 clock = new THREE.Clock();

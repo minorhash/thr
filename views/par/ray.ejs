@@ -89,6 +89,21 @@ return new THREE.Points( geometry, material );
 }
 function init() {
 var container = document.getElementById( 'container' );
+var tx1="mat"
+var info = document.createElement( 'div' );
+info.style.position = 'absolute';
+//info.style.backgroundColor= "lightblue"
+//info.style.opacity=0.5 
+info.style.color= 'white';
+info.style.fontSize= 'xx-large';
+info.style.top = '50px';
+info.style.width = '100%';
+info.style.textShadow= '3px 3px 2px #000000';
+info.style.textAlign = 'center';
+info.innerHTML = tx1
+
+container.appendChild( info );
+
 scene = new THREE.Scene();
 clock = new THREE.Clock();
 camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );

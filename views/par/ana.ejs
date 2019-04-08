@@ -35,6 +35,22 @@ p1.style.textAlign = 'center';
 p1.innerHTML = tx1
 container.appendChild(p1);
 
+var tx2="next >"
+var ref= document.createElement('a');
+    ref.setAttribute("id","nex")
+    ref.setAttribute("href","/page-geo")
+
+ref.style.position = 'absolute';
+ref.style.top = window.innerHeight-250+"px";
+ref.style.width = '100%';
+ref.style.color= 'white';
+ref.style.fontSize= 'xx-large';
+ref.style.backgroundColor= 'gray';
+ref.style.textAlign = 'center';
+ref.innerHTML = tx2
+
+container.appendChild(ref);
+
 camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 100 );
 camera.position.z = 3;
 camera.focalLength = 3;

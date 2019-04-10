@@ -2,37 +2,16 @@
 <html>
 <% include par/head%>
 
-<% if (usr!==null) { %>
-<% include par/nav%>
-<% } %>
 <body>
-
-<!-- menu -->
-
-<div class="container-fluid">
-<div class="row">
-
-<div class="col-sm-1 bg-ali" ></div>
-
-<div class="col-sm-10" >
-<div align="center">
-<br>
-<% if (usr!==null) { %>
-    <h4>    <p class="badge badge-ali">   <a href="/page-cub">ココ</a>からスタートです。</p></h4>
-    <% include par/out %>
-    <% } else { %>
+    <div class="container">
+    <div class="row">
+<% if (usr) { %>
+<% include par/top %>
+<% } else { %>
 <% include par/login %>
 <% } %>
-</div><!-- /center-->
-</div><!-- /col12-->
-
-<div class="col-sm-1 bg-ali" ></div>
-</div><!-- /row-->
-
-
-</div><!-- /container-fluid-->
-
-<% include par/foot %>
+    </div>
+    </div>
 </body>
 </html>
 

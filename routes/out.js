@@ -21,6 +21,7 @@ usr: usr
 });
 };
 
+router.get('/out', [clrSes, chk, rcb]);
 router.post('/out', [clrSes, chk, rcb]);
 
 module.exports = router;

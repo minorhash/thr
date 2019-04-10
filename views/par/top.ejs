@@ -1,6 +1,6 @@
 <script src="lib/jquery.js"></script>
 <script src="thr/three.js"></script>
-<script src="tx/cub.js"></script>
+<script src="tx/top.js"></script>
 <div id="w" class="bg-ali"></div>
 
 <script>
@@ -23,8 +23,6 @@ scene = new THREE.Scene();
 
 var w=window.innerWidth
 var h=window.innerHeight
-//var wid=document.getElementById("w")
-//wid.innerHTML=w+","+h
 
 var info = document.createElement( 'div' );
 info.style.position = 'absolute';
@@ -44,6 +42,35 @@ info.style.width = '100%';
 info.style.textAlign = 'center';
 info.innerHTML = tx1
 container.appendChild( info );
+
+var lab2 = document.createElement( 'div' );
+lab2.style.position = 'absolute';
+//lab2.style.backgroundColor= "lightblue"
+//lab2.style.opacity=0.5 
+lab2.style.color= 'white';
+lab2.style.fontSize= 'xx-large';
+lab2.style.top = 200+"px";
+lab2.style.width = '100%';
+lab2.style.textShadow= '3px 3px 2px #000000';
+lab2.style.textAlign = 'center';
+lab2.innerHTML = tx2
+container.appendChild( lab2 );
+
+var nex="next >"
+var ref= document.createElement('a');
+ref.setAttribute("id","nex")
+ref.setAttribute("href","/page-1")
+
+ref.style.position = 'absolute';
+ref.style.top = window.innerHeight-100+"px";
+ref.style.width = '100%';
+ref.style.color= 'white';
+ref.style.fontSize= 'xx-large';
+ref.style.backgroundColor= 'gray';
+ref.style.textAlign = 'center';
+ref.innerHTML = nex
+
+container.appendChild(ref);
 
 //
 camera = new THREE.PerspectiveCamera( 50, 1 * aspect, 1, 10000 );
@@ -101,24 +128,7 @@ renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
 container.appendChild( renderer.domElement );
 renderer.autoClear = false;
 //
-//stats = new Stats();
-//container.appendChild( stats.dom );
 //
-//window.addEventListener( 'resize', onWindowResize, false );
-//document.addEventListener( 'keydown', onKeyDown, false );
-}
-//
-function onKeyDown( event ) {
-switch ( event.keyCode ) {
-case 79: /*O*/
-activeCamera = cameraOrtho;
-activeHelper = cameraOrthoHelper;
-break;
-case 80: /*P*/
-activeCamera = cameraPerspective;
-activeHelper = cameraPerspectiveHelper;
-break;
-}
 }
 //
 function onWindowResize() {
@@ -149,27 +159,17 @@ mesh.position.z = 700 * Math.sin( r );
 mesh.position.y = 700 * Math.sin( r );
 mesh.children[ 0 ].position.x = 70 * Math.cos( 2 * r );
 mesh.children[ 0 ].position.z = 70 * Math.sin( r );
-if ( activeCamera === cameraPerspective ) {
-cameraPerspective.fov = 35 + 30 * Math.sin( 0.5 * r );
-cameraPerspective.far = mesh.position.length();
-cameraPerspective.updateProjectionMatrix();
-cameraPerspectiveHelper.update();
-cameraPerspectiveHelper.visible = true;
-cameraOrthoHelper.visible = false;
-} else {
+
 cameraOrtho.far = mesh.position.length();
 cameraOrtho.updateProjectionMatrix();
 cameraOrthoHelper.update();
 cameraOrthoHelper.visible = true;
 cameraPerspectiveHelper.visible = false;
-}
+
 cameraRig.lookAt( mesh.position );
 renderer.clear();
-activeHelper.visible = false;
 renderer.setViewport( 0, 0, SCREEN_WIDTH , SCREEN_HEIGHT );
-renderer.render( scene, activeCamera );
-activeHelper.visible = true;
-//renderer.setViewport( SCREEN_WIDTH / 2, 0, SCREEN_WIDTH / 2, SCREEN_HEIGHT );
+//renderer.render( scene, activeCamera );
 renderer.render( scene, camera );
 }
 </script>

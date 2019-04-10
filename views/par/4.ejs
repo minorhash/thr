@@ -1,6 +1,7 @@
+<div id="container"></div>
 <script src="thr/three.js"></script>
 <script src="thr/WebGL.js"></script>
-<script src="tx/3.js"></script>
+<script src="tx/4.js"></script>
 
 <script type="x-shader/x-vertex" id="vertexshader">
 attribute float size;
@@ -25,12 +26,11 @@ gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord );
 
 <script>
 
-var tx1="hi there"
 var lab1 = document.createElement('div');
 lab1.style.position = 'absolute';
 lab1.style.fontSize= 'xx-large';
 lab1.style.color= "white";
-lab1.style.top = 100+"px"
+lab1.style.top = 0+"px"
 lab1.style.left= window.innerWidth/2-100+"px"
 lab1.style.textShadow= '3px 3px 2px #000000';
 lab1.style.textAlign= 'center';
@@ -88,6 +88,8 @@ renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
 var container = document.getElementById( 'container' );
 container.appendChild( renderer.domElement );
+//stats = new Stats();
+//container.appendChild( stats.dom );
 //
 window.addEventListener( 'resize', onWindowResize, false );
 }
